@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 const Timeline = ({ store }) => (
   <div>
     <h1>Timeline</h1>
-    {store.persons.map(x => {
+    {store.persons.forEach(x => {
       <div> {x.user} </div>
     })
     }

@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Timeline from './components/Timeline'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import persons from '../data'
 import thunk from 'redux-thunk'
+import Timeline  from './components/Timeline'
 
 const middleware = [thunk]
 const initialState = {
