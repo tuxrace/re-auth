@@ -5,7 +5,7 @@ const Timeline = ({ store }) => (
   <div>
     <h1>Timeline</h1>
     {store.persons.forEach(x => {
-      <div> {x.user} </div>
+      return <div> {x.user} </div>
     })
     }
   </div>
