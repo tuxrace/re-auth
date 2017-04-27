@@ -4,12 +4,12 @@ import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import persons from '../data'
 import thunk from 'redux-thunk'
-import Timeline  from './components/Timeline'
+import Timeline from './components/Timeline'
 
 const middleware = [thunk]
 const initialState = {
   persons
-};
+}
 
 const reducer1 = (state = initialState, action) => {
   return state
@@ -26,7 +26,7 @@ const reducer = combineReducers(red)
 const store = createStore(reducer, applyMiddleware(...middleware))
 
 const App = () => (
-  <Provider store={store}>  
+  <Provider store={store}>
     <Timeline />
   </Provider>
 )
