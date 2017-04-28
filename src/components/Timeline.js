@@ -1,9 +1,9 @@
-/* @flow */
+// @flow
 import React from 'react'
 import { connect } from 'react-redux'
 import { hello } from '../actions/index'
 
-const Timeline = ({ store, hello }) => (
+const Timeline = ({store, hello}: { store: Object, hello: Function }) => (
   <div>
     <h1>Timeline</h1>
     {store.persons.forEach(x => {
