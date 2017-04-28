@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react'
 import { connect } from 'react-redux'
+import { hello } from '../actions/index'
 const { object } = React.PropTypes
 
 const Timeline = ({ store }) => (
@@ -9,6 +10,8 @@ const Timeline = ({ store }) => (
     {store.persons.forEach(x => {
       return <div> {x.user} </div>
     })}
+    <button onClick={hello('Hi arman')}> Test </button>
+    {store.greeting}
   </div>
 )
 
