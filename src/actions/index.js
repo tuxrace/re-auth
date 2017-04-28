@@ -1,3 +1,4 @@
-export const hello = (str) => dispatch => {  
-  dispatch({action:'GREETING', data:str})
+export const hello = str => dispatch => {
+  console.log('hi')
+  dispatch({type: 'GREETING', data: str})
 }
