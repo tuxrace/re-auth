@@ -13,14 +13,15 @@ const initialState = {
 }
 
 const reducer1 = (state = initialState, action) => {
-  return state
+  switch (action.type) {
+    case 'GREETING':
+      return Object.assign({}, state, {greeting: action.data})
+    default:
+      return state
+  }
 }
 
-const reducer2 = (state = initialState, action) => {
-  return state
-}
-
-const red = {reducer1, reducer2}
+const red = {reducer1}
 
 const reducer = combineReducers(red)
 

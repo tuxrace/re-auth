@@ -1,25 +1,23 @@
 /* @flow */
 import React from 'react'
 import { connect } from 'react-redux'
-const { object } = React.PropTypes
+import { hello } from '../actions/index'
 
-const Timeline = ({ store }) => (
+const Timeline = ({ store, hello }) => (
   <div>
     <h1>Timeline</h1>
     {store.persons.forEach(x => {
       return <div> {x.user} </div>
     })}
+    <button onClick={() => hello('Hi arman')}> Test </button>
+    {store.greeting}
   </div>
 )
 
-Timeline.propTypes = {
-  store: object
+function test (str) {
+  return str * 2
 }
 
-function add (x) {
-  return x * 2
-}
+test('test')
 
-add('testresd')
-
-export default connect(state => ({ store: state.reducer1 }), null)(Timeline)
+export default connect(state => ({ store: state.reducer1 }), ({hello}))(Timeline)
