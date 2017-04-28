@@ -2,7 +2,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { hello } from '../actions/index'
-const { object, func } = React.PropTypes
 
 const Timeline = ({ store, hello }) => (
   <div>
@@ -15,9 +14,10 @@ const Timeline = ({ store, hello }) => (
   </div>
 )
 
-Timeline.propTypes = {
-  store: object,
-  hello: func
+function test (str) {
+  return str * 2
 }
+
+test('test')
 
 export default connect(state => ({ store: state.reducer1 }), ({hello}))(Timeline)
