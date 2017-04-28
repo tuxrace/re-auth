@@ -1184,11 +1184,7 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
-<<<<<<< HEAD
 doctrine@1.5.0, doctrine@^1.2.2:
-=======
-doctrine@1.5.0:
->>>>>>> ba4c47aa4dfc07b5507f2f174fdc8e0099339a4f
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
   dependencies:
@@ -1743,11 +1739,7 @@ fstream@^1.0.0, fstream@^1.0.10, fstream@^1.0.2:
     mkdirp ">=0.5 0"
     rimraf "2"
 
-<<<<<<< HEAD
 function-bind@^1.0.2, function-bind@^1.1.0:
-=======
-function-bind@^1.0.2:
->>>>>>> ba4c47aa4dfc07b5507f2f174fdc8e0099339a4f
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.0.tgz#16176714c801798e4e8f2cf7f7529467bb4a5771"
 
