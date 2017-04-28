@@ -1,3 +1,4 @@
+/* @flow */
 import React from 'react'
 import { render } from 'react-dom'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
@@ -31,4 +32,4 @@ const App = () => (
   </Provider>
 )
 
-render(<App/>, document.getElementById('root'))
+render('<App/>', document.getElementById('root'))
