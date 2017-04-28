@@ -22981,7 +22981,7 @@ var _reactRedux = __webpack_require__(183);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Timeline = function Timeline(_ref) {
-  var persons = _ref.persons;
+  var store = _ref.store;
   return _react2.default.createElement(
     'div',
     null,
@@ -22990,7 +22990,7 @@ var Timeline = function Timeline(_ref) {
       null,
       'Timeline'
     ),
-    persons.map(function (x) {
+    store.persons.forEach(function (x) {
       return _react2.default.createElement(
         'div',
         null,
@@ -23002,8 +23002,14 @@ var Timeline = function Timeline(_ref) {
   );
 };
 
+function diff(a, b) {
+  return a - b;
+}
+
+diff('test', 'kmmk');
+
 exports.default = (0, _reactRedux.connect)(function (state) {
-  return { store: state };
+  return { store: state.reducer1 };
 }, null)(Timeline);
 
 /***/ }),
@@ -23048,10 +23054,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(81);
 
-var _Timeline = __webpack_require__(196);
-
-var _Timeline2 = _interopRequireDefault(_Timeline);
-
 var _redux = __webpack_require__(184);
 
 var _reactRedux = __webpack_require__(183);
@@ -23064,20 +23066,38 @@ var _reduxThunk = __webpack_require__(197);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
+var _Timeline = __webpack_require__(196);
+
+var _Timeline2 = _interopRequireDefault(_Timeline);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var middleware = ['thunk'];
+var middleware = [_reduxThunk2.default];
+
 var initialState = {
   persons: _data2.default
 };
 
-var reducer = function reducer() {
+var reducer1 = function reducer1() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments[1];
 
   return state;
 };
+
+var reducer2 = function reducer2() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments[1];
+
+  return state;
+};
+
+var red = { reducer1: reducer1, reducer2: reducer2 };
+
+var reducer = (0, _redux.combineReducers)(red);
+
 var store = (0, _redux.createStore)(reducer, _redux.applyMiddleware.apply(undefined, middleware));
+
 var App = function App() {
   return _react2.default.createElement(
     _reactRedux.Provider,
@@ -23086,7 +23106,7 @@ var App = function App() {
   );
 };
 
-(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('root'));
+(0, _reactDom.render)('<App/>', document.getElementById('root'));
 
 /***/ }),
 /* 199 */

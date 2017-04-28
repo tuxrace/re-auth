@@ -1,20 +1,25 @@
+/* @flow */
 import React from 'react'
-import { connect, test } from 'react-redux'
+import { connect } from 'react-redux'
+const { object } = React.PropTypes
 
 const Timeline = ({ store }) => (
   <div>
     <h1>Timeline</h1>
     {store.persons.forEach(x => {
       return <div> {x.user} </div>
-    })
-    }
+    })}
   </div>
 )
 
-function diff(a,b){
-  return a - b
+Timeline.propTypes = {
+  store: object
 }
 
-diff("test","kmmk")
+function add (x) {
+  return x * 2
+}
+
+add('testresd')
 
 export default connect(state => ({ store: state.reducer1 }), null)(Timeline)

@@ -1,17 +1,17 @@
 module.exports = [
   {
-    "user":"arman",
-    "likes": ["jane"],
-    "likedBy":["anna","jane"]
+    'user': 'arman',
+    'likes': ['jane'],
+    'likedBy': ['anna', 'jane']
   },
   {
-    "user":"jack",
-    "likes": ["jane"],
-    "likedBy":[]
+    'user': 'jack',
+    'likes': ['jane'],
+    'likedBy': []
   },
   {
-    "user":"anna",
-    "likes": ["jack"],
-    "likedBy":["jack"]
+    'user': 'anna',
+    'likes': ['jack'],
+    'likedBy': ['jack']
   }
 ]
