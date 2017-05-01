@@ -3,5 +3,9 @@ module.exports = {
       "node":true,
       "browser":true
     },
-    "extends": ["standard", "plugin:react/recommended"]
+    "extends": ["standard", "plugin:react/recommended"],
+    "plugins": [
+      "flowtype"
+    ],
+    "parser": "babel-eslint"
 };
