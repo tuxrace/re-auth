@@ -1,7 +1,11 @@
 module.exports = {
-    "extends": "standard",
+    "env":{
+      "node":true,
+      "browser":true
+    },
+    "extends": ["standard", "plugin:react/recommended"],
     "plugins": [
-        "standard",
-        "promise"
-    ]
+      "flowtype"
+    ],
+    "parser": "babel-eslint"
 };
